@@ -782,7 +782,7 @@ def _parse_image(body: SAMBody):
     """
     image = decode_image(body.b64img)
     if image.ndim == 2:
-        image = np.stack((image,) * 3, axes=-1)
+        image = np.stack((image,) * 3, axis=-1)
     return image
 
 
